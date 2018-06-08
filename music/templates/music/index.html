@@ -1,6 +1,6 @@
-
-<h1>List of all Albums</h1>
 {% if all_albums %}
+    <center><h1><font color="blue" size="5" face ="Comic Sans MS"><u>List of Albums</u></font> </h1></center>
+    <center><h2><font color="red" face ="verdana"><marquee direction="up">Click to See Details</marquee></font></h2></center>
     <ul>
         {% for album in all_albums %}
         <li><a href = "/music/{{album.id}}/">{{album.album_title}}</a></li>
