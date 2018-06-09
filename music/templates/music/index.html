@@ -1,6 +1,8 @@
+{% extends 'music/base.html' %}
+
+{% block body %}
 {% if all_albums %}
-    <center><h1><font color="blue" size="5" face ="Comic Sans MS"><u>List of Albums</u></font> </h1></center>
-    <center><h2><font color="red" face ="verdana"><marquee direction="up">Click to See Details</marquee></font></h2></center>
+    <h1><font color="white" size="5" face ="Comic Sans MS"><u>List of Albums</u></font> </h1><br>
     <ul>
         {% for album in all_albums %}
         <li><a href = "{% url 'music:detail' album.id %}">{{album.album_title}}</a></li>
@@ -9,3 +11,4 @@
 {% else %}
     <h3>You Don't Have Any Albums</h3>
 {% endif %}
+{% endblock %}
